@@ -1,0 +1,22 @@
+@font-face {
+    font-family: "BTTF";
+    src: url("back_to_the_future/BTTF.ttf");
+}
+
+#btf {
+    font-family: "BTTF";
+    color: navy;
+    font-size: 60px;
+    line-height: 1;
+    text-shadow: 1px 1px 2px #ff66cc;
+}
+
+#mainBack {
+    background-color: #00aeff;
+}
+
+body {
+    background-image: url("../images/neon_grid.jpg");
+    background-position: center;
+    background-size: cover;
+}
