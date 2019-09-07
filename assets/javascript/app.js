@@ -12,9 +12,7 @@
 
 // Done button displayed at the bottom of the page that ends the game on user's command
 
-//Which Backstreet Boy sings the first line in "I Want It That Way"?
-//Brian Littrell
-//AJ Mclean
-//Nick Carter
-//Kevin Richardson
+function myFunction() {
+    document.getElementById("startButton").style.color = "red";
+  }
 
