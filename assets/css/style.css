@@ -1,22 +1,48 @@
+body {
+    background-image: url("../images/neon_grid.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
 @font-face {
     font-family: "BTTF";
     src: url("back_to_the_future/BTTF.ttf");
 }
 
+#mainBox{
+    background-color: rgba(255,255,255, 0.4);
+    border-radius: 10px;
+}
+
+#logoBox{
+    background-color: transparent;
+    width: 40%;
+    padding-top: 10px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 #btf {
     font-family: "BTTF";
-    color: navy;
-    font-size: 60px;
+    color: #06064b;
+    font-size: 70px;
     line-height: 1;
-    text-shadow: 1px 1px 2px #ff66cc;
+    text-shadow: 1px 1px 2px white;
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
 }
 
-#mainBack {
-    background-color: #00aeff;
-}
 
-body {
-    background-image: url("../images/neon_grid.jpg");
-    background-position: center;
-    background-size: cover;
+
+
+@-webkit-keyframes glow {
+    from {
+      text-shadow: 0 0 2px #fff, 0 0 4px #fff, 0 0 6px #e60073, 0 0 8px #e60073, 0 0 10px #e60073, 0 0 12px #e60073;
+    }
+    
+    to {
+      text-shadow: 0 0 4px #fff, 0 0 8px #ff4da6, 0 0 12px #ff4da6, 0 0 16px #ff4da6, 0 0 20px #ff4da6, 0 0 24px #ff4da6;
+    }
 }
