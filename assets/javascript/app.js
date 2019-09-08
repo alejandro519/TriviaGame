@@ -12,7 +12,14 @@
 
 // Done button displayed at the bottom of the page that ends the game on user's command
 
-function myFunction() {
-    document.getElementById("startButton").style.color = "red";
-  }
+$(document).ready(function() {
 
+    // Here we use jQuery to select the header with "startButton" as its ID.
+    // Notice I have the #click-me, click, and then the function
+    // So $("#id|.class|element").on("action", function(){});
+    // And so whenever it is clicked...
+    $("#startButton").on("click", function() {
+      alert("I've been clicked!");
+    });
+
+  });
