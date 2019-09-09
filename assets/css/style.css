@@ -10,7 +10,7 @@ body {
 }
 
 #mainBox{
-    background-color: rgba(255,255,255, 0.5);
+    background-color: rgba(255,255,255, 0.6);
     border-radius: 10px;
 }
 
@@ -35,6 +35,19 @@ body {
 }
 
 #startButton {
+    background-color: #06064b;
+    color: white;
+    font-size: 35px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-right: 30px;
+    padding-left: 30px;
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
+}
+
+#submitButton {
     background-color: #06064b;
     color: white;
     font-size: 35px;
