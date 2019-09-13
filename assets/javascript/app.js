@@ -87,7 +87,7 @@ document.getElementById("startButton").onclick = function () {
 
 function quiz(){
 }
-quiz()
+quiz() 
 
 
 document.getElementById("submitButton").onclick = function () {
