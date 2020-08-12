@@ -26,11 +26,11 @@
             <div class="container text-center">
 
 
-                <button id="startButton" type="button" class="btn btn-light my-5" onclick="myFunction()">START</button>
+                <button id="startButton" type="button" class="btn btn-light my-5">START</button>
 
                 <div id="myQuiz">
                     <br>
-                    <h2 id="timer">Time remaining: 30 seconds</h2><br>
+                    <h2 id="timer">Time remaining: <span id="counter"></span> seconds</h2><br>
 
                     <h4 id="question1">Back to the Future takes place in which fictional California town?</h4>
                     <span><input type="radio" name="example1">&nbsp;Hidden Hills</span>&nbsp;&nbsp;
@@ -122,8 +122,8 @@
                     <br>
                     <br>
 
-                    <h4 id="question10">At the end of the movie, Doc Brown arrives in the time machine to pick up Marty
-                        and Lorraine from Marty's house. Where are they headed?</h4>
+                    <h4 id="question10">Towards the end of the movie, Doc Brown arrives in the time machine to pick up
+                        Marty and Lorraine from Marty's house. Where are they headed?</h4>
                     <span><input type="radio" name="example10">&nbsp;The lake for the weekend</span>&nbsp;&nbsp;
                     <span><input type="radio" name="example10">&nbsp;To get a bite to eat</span>&nbsp;&nbsp;
                     <span><input type="radio" name="example10">&nbsp;The future</span>&nbsp;&nbsp;
@@ -145,9 +145,10 @@
     <script src="assets/javascript/app.js">
     </script>
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous"></script>   
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
         crossorigin="anonymous"></script>

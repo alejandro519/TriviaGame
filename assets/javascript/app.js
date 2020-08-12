@@ -12,11 +12,12 @@
 
 // Done button displayed at the bottom of the page that ends the game on user's command
 
-var counter = 30;
-var correctAns = 0;
-var incorrectAns = 0;
-var unanswered = 0;
+let counter = 8;
+// var correctAns = 0;
+// var incorrectAns = 0;
+// var unanswered = 0;
 var timer;
+var intId;
 var questions = [
   {
     question: "Back to the Future takes place in which fictional California town?",
@@ -70,27 +71,76 @@ var questions = [
   }
 ]
 
+var qCounter = 1
 
-document.getElementById("myQuiz").style.display = "none";
+const decrementCounter = () => {
+  // decrement the counter
+  counter--;
+  // select that element on the page, using jquery or vanilla js
+  $("#counter").text(counter)
 
-document.getElementById("startButton").onclick = function () {
+  // check if the counter hits 0
+  if (counter === 0) {
+    console.log('Counter hit 0!')
+    clearInterval(intId);
+    // gameOver();
+  }
+  // set its value (or text) = our conter variable 
+}; 
 
-  document.getElementById("myQuiz").style.display = "block";
+const countDown = () => {
+  intId = setInterval(decrementCounter, 1000);
+}
 
-  document.getElementById("startButton").style.display = "none";
+const displayQuestions = () => {
+  // loop over our question array
+  questions.map(question => {
+    // build the html elements to hold the question
+    var questionElement = $(`<h4 id='question${qCounter}'>`).text(question.question);
+    // increment our question counter for creating unique IDs
+    qCounter++;
+    // build the html elements to hold the answers
+      // another FOR loop or another MAP over question.choices
+      // once everything is built, we need to append it to the DOM - select some element in the dom for us to append to  
+
+      // <h4 id="question1">Back to the Future takes place in which fictional California town?</h4>
+    //   <span><input type="radio" name="example1">&nbsp;Hidden Hills</span>&nbsp;&nbsp;
+  })
 
 }
+const startGame = () => {
+  // call a display question function
+  displayQuestions();
+  // start the countdown
+  countDown();
+}
+// listen for end game condition
+  // if the timer hits 0 || if the player hits submit - call the calculateScore function
+
+// build a game over function 
+
+// hide the quiz at the start of the game 
+document.getElementById("myQuiz").style.display = "none";
+
+$("#startButton").on('click', () => {
+  // hide the first screen  
+  $('#startButton').css('display', 'none')
+  // display our questions
+  $('#myQuiz').css('display', 'block')
+  // start our game 
+  startGame();
+
+})
+
+
 
 //if the answer to question 1 is right, increase the correctAns var by 1
 //if the answer to question 1 is wrong, increase the incorrectQues var by 1
 //if the asnwer to question 1 is unanswered, increase the unasnwered var by 1
 
-function quiz(){
-}
-quiz() 
-
 
 document.getElementById("submitButton").onclick = function () {
+  // hide the questions
   document.getElementById("myQuiz").style.display = "none";
 }
 
